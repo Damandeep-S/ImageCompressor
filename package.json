@@ -1,0 +1,20 @@
+{
+  "name": "image-compressing",
+  "version": "1.0.0",
+  "description": "Compressing images using sharp",
+  "main": "index.js",
+  "scripts": {
+    
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.5.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
