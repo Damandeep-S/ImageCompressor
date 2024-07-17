@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "description": "Compressing images using sharp",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    
+    "dev": "nodemon src/index.js"
   },
   "author": "",
   "license": "ISC",
@@ -15,6 +16,7 @@
     "mongoose": "^8.5.1"
   },
   "devDependencies": {
-    "dotenv": "^16.4.5"
+    "dotenv": "^16.4.5",
+    "nodemon": "^3.1.4"
   }
 }
