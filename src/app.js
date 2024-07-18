@@ -11,4 +11,9 @@ app.use(express.static('public'))  //example, if there's an image in the public 
 
 app.use(cookieParser())
 
+
+import imageRouter from './routes/compressor.routes.js'
+
+app.use("/api/v1/image",imageRouter)
+
 export {app}
