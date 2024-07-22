@@ -16,13 +16,18 @@ const compressor = asyncHandler(async (req, res) => {
   const outputImgPath = `${imgPath}.compressed.jpg`;
 
   await sharp(imgPath)
-  .jpeg({ quality: 50 }) // Adjust quality as needed (80 is just an example)
+  .jpeg({ quality: 50 }) 
   .toFile(outputImgPath);
 
 
   const imgFile=await uploadOnCloudinary(outputImgPath)
 
-  await fs.promises.unlink(imgPath);
+  // await fs.promises.unlink(imgPath);
+  try {
+    await fs.promises.unlink(imgPath);
+  } catch (unlinkError) {
+    console.error('Error deleting files:', unlinkError);
+  }
 
   if (!imgFile) {
     throw new ApiError(400, 'Failed to upload image to Cloudinary');
